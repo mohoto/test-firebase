@@ -1,6 +1,6 @@
 import React from 'react';
 import 'antd/dist/antd.css';
-import SiderDemo from './interfaces/SiderDemo';
+import SiderDemo from './Composants/interfaces/SiderDemo';
 
 function App() {
   return (

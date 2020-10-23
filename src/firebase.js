@@ -1,6 +1,6 @@
   import firebase from 'firebase';
 
-  const firebaseApp = firebase.InitializeApp({
+  const firebaseApp = firebase.initializeApp({
         apiKey: "AIzaSyAR4M-pfj0DG8LEsexNrKHkBycLEBH2unA",
         authDomain: "app-test-a1a35.firebaseapp.com",
         databaseURL: "https://app-test-a1a35.firebaseio.com",
@@ -12,4 +12,4 @@
 
   const db = firebaseApp.firestore();
 
-  export {db};
+export default db;
