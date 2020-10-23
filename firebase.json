@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "site": "app-test-a1a35",
     "public": "build",
     "ignore": [
       "firebase.json",
