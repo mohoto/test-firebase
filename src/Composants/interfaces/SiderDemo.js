@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
+import darkTheme from '@ant-design/dark-theme';
 import { Layout, Menu, Breadcrumb } from 'antd';
-//import SiderContent from './SiderContent';
 import {
   DesktopOutlined,
   PieChartOutlined,
@@ -10,7 +10,11 @@ import {
 } from '@ant-design/icons';
 import './SiderDemo.css';
 import 'antd/dist/antd.css';
-import SiderContent from './SiderContent';
+import ListContent from '../todo/ListContent';
+import Compteur from '../redux-hooks/Compteur';
+import Name from '../redux-hooks/Name';
+import ContentTitre from '../todo/ContentTitre';
+import TitreContextProvider from '../../Context/TitreContext';
 
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
@@ -52,7 +56,7 @@ function SiderDemo() {
           </Menu>
         </Sider>
         <Layout className="site-layout">
-          <Header className="site-layout-background" style={{ padding: 0 }} >
+          <Header className="site-layout-background" style={{ display: 'flex', justifyContent: 'center' }} >
                 <h1>MY APP</h1>
            </Header> 
           <Content style={{ margin: '0 16px' }}>
@@ -62,7 +66,12 @@ function SiderDemo() {
             </Breadcrumb>
             <div className="site-layout-background" style={{ padding: 24, minHeight: 360 }}>
               
-              <SiderContent />
+              <ListContent />
+              <Compteur />
+              <Name />
+              <TitreContextProvider >
+                  <ContentTitre />
+              </TitreContextProvider>
 
             </div>
         </Content>
